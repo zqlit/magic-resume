@@ -15,6 +15,15 @@ type FontDefinition = {
 
 export const DEFAULT_FONT_FAMILY = "\"Alibaba PuHuiTi\", sans-serif";
 
+// CDN 字体 URL
+const CDN_URLS = {
+  alibabaRegular: "https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-3/AlibabaPuHuiTi-3-55-Regular/AlibabaPuHuiTi-3-55-Regular.woff2",
+  alibabaBold: "https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-3/AlibabaPuHuiTi-3-85-Bold/AlibabaPuHuiTi-3-85-Bold.woff2",
+  misans: "https://font.sec.miui.com/font/css?family=MiSans:400,500,700:Chinese_Simplify,Latin&display=swap",
+  notoSansSc: "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap",
+  notoSerifSc: "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap",
+};
+
 const FONT_DEFINITIONS: FontDefinition[] = [
   {
     labelKey: "alibaba",
@@ -26,15 +35,15 @@ const FONT_DEFINITIONS: FontDefinition[] = [
     sources: [
       {
         family: "Alibaba PuHuiTi",
-        url: "/fonts/AlibabaPuHuiTi-3-55-Regular.ttf",
-        format: "truetype",
+        url: CDN_URLS.alibabaRegular,
+        format: "woff2",
         weight: "400",
         style: "normal"
       },
       {
         family: "Alibaba PuHuiTi",
-        url: "/fonts/AlibabaPuHuiTi-3-85-Bold.ttf",
-        format: "truetype",
+        url: CDN_URLS.alibabaBold,
+        format: "woff2",
         weight: "700",
         style: "normal"
       }
@@ -54,15 +63,15 @@ const FONT_DEFINITIONS: FontDefinition[] = [
     sources: [
       {
         family: "MiSans",
-        url: "/fonts/MiSans-Normal.ttf",
-        format: "truetype",
+        url: CDN_URLS.misans,
+        format: "woff2",
         weight: "400",
         style: "normal"
       },
       {
         family: "MiSans",
-        url: "/fonts/MiSans-Bold.ttf",
-        format: "truetype",
+        url: CDN_URLS.misans,
+        format: "woff2",
         weight: "700",
         style: "normal"
       }
@@ -78,22 +87,22 @@ const FONT_DEFINITIONS: FontDefinition[] = [
     sources: [
       {
         family: "Noto Sans SC",
-        url: "/fonts/NotoSansSC-Regular.otf",
-        format: "opentype",
+        url: CDN_URLS.notoSansSc,
+        format: "woff2",
         weight: "400",
         style: "normal"
       },
       {
         family: "Noto Sans SC",
-        url: "/fonts/NotoSansSC-Medium.otf",
-        format: "opentype",
+        url: CDN_URLS.notoSansSc,
+        format: "woff2",
         weight: "500",
         style: "normal"
       },
       {
         family: "Noto Sans SC",
-        url: "/fonts/NotoSansSC-Bold.otf",
-        format: "opentype",
+        url: CDN_URLS.notoSansSc,
+        format: "woff2",
         weight: "700",
         style: "normal"
       }
@@ -111,22 +120,22 @@ const FONT_DEFINITIONS: FontDefinition[] = [
     sources: [
       {
         family: "Source Han Serif SC",
-        url: "/fonts/SourceHanSerifSC-Regular.otf",
-        format: "opentype",
+        url: CDN_URLS.notoSerifSc,
+        format: "woff2",
         weight: "400",
         style: "normal"
       },
       {
         family: "Source Han Serif SC",
-        url: "/fonts/SourceHanSerifSC-Medium.otf",
-        format: "opentype",
+        url: CDN_URLS.notoSerifSc,
+        format: "woff2",
         weight: "500",
         style: "normal"
       },
       {
         family: "Source Han Serif SC",
-        url: "/fonts/SourceHanSerifSC-Bold.otf",
-        format: "opentype",
+        url: CDN_URLS.notoSerifSc,
+        format: "woff2",
         weight: "700",
         style: "normal"
       }
