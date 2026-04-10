@@ -4,7 +4,10 @@
 /* Noto Serif SC - Google Fonts CDN */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap');
 
-/* Alibaba PuHuiTi - 阿里巴巴 CDN */
+/* MiSans - 小米官方 CDN (CSS 方式加载) */
+@import url('https://font.sec.miui.com/font/css?family=MiSans:400,500,700:Chinese_Simplify,Latin&display=swap');
+
+/* Alibaba PuHuiTi - 阿里巴巴 CDN (直接字体文件) */
 @font-face {
   font-family: "Alibaba PuHuiTi";
   src: url("https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-3/AlibabaPuHuiTi-3-55-Regular/AlibabaPuHuiTi-3-55-Regular.woff2") format("woff2");
@@ -21,20 +24,4 @@
   font-display: swap;
 }
 
-/* MiSans - 小米官方 CDN */
-@font-face {
-  font-family: "MiSans";
-  src: url("https://font.sec.miui.com/font/css?family=MiSans:400,500,700:Chinese_Simplify,Latin&display=swap");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "MiSans";
-  src: url("https://font.sec.miui.com/font/css?family=MiSans:400,500,700:Chinese_Simplify,Latin&display=swap");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
