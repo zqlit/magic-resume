@@ -13,6 +13,27 @@ export default defineConfig({
   ssr: {
     noExternal: ["pdfjs-dist"]
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Split mermaid into smaller chunks
+          if (id.includes("mermaid")) {
+            return "mermaid-vendor";
+          }
+          // Split pdf.js into its own chunk
+          if (id.includes("pdfjs-dist") || id.includes("pdf.worker")) {
+            return "pdf-vendor";
+          }
+          // Split large UI libraries
+          if (id.includes("framer-motion")) {
+            return "framer-motion";
+          }
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000
+  },
   plugins: [
     tsconfigPaths(),
     tanstackStart({
