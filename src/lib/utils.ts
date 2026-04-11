@@ -9,6 +9,14 @@ function parseToDate(dateStr: string): Date | null {
   let year: number | null = null;
   let month: number | null = null;
 
+  // ISO 8601 format: 2023-08-31T16:00:00.000Z
+  if (dateStr.match(/^\d{4}-\d{2}-\d{2}T/)) {
+    const date = new Date(dateStr);
+    if (!isNaN(date.getTime())) {
+      return date;
+    }
+  }
+
   if (dateStr.match(/^\d{4}-\d{2}$/)) {
     const parts = dateStr.split("-");
     year = parseInt(parts[0], 10);
